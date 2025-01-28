@@ -6,6 +6,14 @@ import { NavLink } from "react-router-dom";
 // eslint-disable-next-line no-unused-vars
 import Footer from "../Footer/Footer";
 import { useState, useEffect } from "react";
+import man from "../../assets/images/man.png";
+import momo from "../../assets/images/momo.png";
+import circle from "../../assets/images/circle.png";
+import like from "../../assets/images/like.png";
+import party from "../../assets/images/party.png";
+import chefCap from "../../assets/images/chefCap.png";
+import girl from "../../assets/images/girl.png";
+
 
 function Home() {
   const [recipes, setRecipes] = useState([]);
@@ -65,14 +73,14 @@ function Home() {
 
         <div className="   flex items-center p-50 overflow-hidden h-[110%] ">
           <img
-            src="src/assets/images/circle.png"
+            src={circle}
             alt="circle_img"
             className="w-[31%] ml-[70%] mb-14"
           />
         </div>
 
         <img
-          src="src/assets/images/momo.png"
+          src={momo}
           alt="momo"
           className=" absolute w-80 left-[75%] mt-12 "
         />
@@ -81,7 +89,7 @@ function Home() {
       <div className=" flex items-center gap-20 ">
         <div className=" w-[30%] p-5 ml-[20%] ">
           <img
-            src="src/assets/images/man.png"
+            src={man}
             alt="man"
             className="w-auto h-96"
           />
@@ -230,17 +238,17 @@ function Home() {
         {/* this is after the video */}
         <div className=" flex justify-center items-center gap-40 mt-60">
           <img
-            src="src/assets/images/like.png"
+            src={like}
             alt="qualityFood"
             className=" w-48"
           />
           <img
-            src="src/assets/images/party.png"
+            src={party}
             alt="party_img"
             className="w-48"
           />
           <img
-            src="src/assets/images/chefCap.png"
+            src={chefCap}
             alt="chefCap_img"
             className="w-48"
           />
@@ -275,7 +283,7 @@ function Home() {
 
           <div className=" ml-44 mt-5 mb-10">
             <img
-              src="src/assets/images/girl.png"
+              src={girl}
               alt="girl"
               className="w-80 h-96"
             />
