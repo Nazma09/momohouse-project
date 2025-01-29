@@ -85,7 +85,7 @@ function ProductDescription() {
                   </button>
                   <button
                   onClick={() => {
-                    dispatch({type:"AddToCart",payload:singleProduct});
+                    dispatch({type:"ADD_TO_CART",payload:singleProduct});
                   }}
                     className="bg-orange-500 hover:bg-orange-600 p-4
                         gap-x-2 text-white font-bold w-36 text-center rounded-sm"

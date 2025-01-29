@@ -111,7 +111,7 @@ function CartPage() {
       <p className="text-2xl font-medium mt-4">Total</p>
           <button className="font-medium text-orange-600 mt-2 "
             onClick={() => {
-              dispatch({ type: "EmptyCart" });
+              dispatch({ type: "ClearCart" });
             }}
           >
               Rs.({totalitems})
@@ -129,7 +129,7 @@ function CartPage() {
 
       <button 
       onClick={()=>{
-        dispatch({type:"EmptyCart"})
+        dispatch({type:"ClearCart"})
       }}
        className="bg-red-600 text-white rounded p-2 w-52 mt-4 " > Clear Cart</button>
     </div>
