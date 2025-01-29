@@ -1,8 +1,8 @@
 
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import { FaFacebook } from "react-icons/fa";
-import { FaGoogle } from "react-icons/fa";
+
+import { FcGoogle } from "react-icons/fc";
 
 
 
@@ -79,20 +79,17 @@ const Login = () => {
           </button>
 
 
-         <div className="flex gap-5">
           <button
-          onClick={() => {
-            loginWithRedirect()}}
-            type="submit"
-            className="w-50 px-4 py-2 flex text-white bg-orange-500 rounded-md hover:bg-orange-600  items-center"
-          ><FaGoogle  size={22}/>Login with Google</button>
-          <button
-          onClick={() => {
-            loginWithRedirect()}}
-            type="submit"
-            className="w-50 px-4 py-2 text-white bg-orange-500 rounded-md hover:bg-orange-600 flex  items-center"
-          > <FaFacebook size={25} /><span className="">Login with Facebook</span></button>
-          </div>
+          onClick={() =>
+            loginWithRedirect()
+          }
+          type="button"
+          className="flex items-center gap-2 justify-center border-2 border-slate-500 mt-3 w-full py-2 px-4 text-black font-medium rounded-md hover:text-white hover:bg-green-700"
+        >
+          <FcGoogle size="25" />
+          Login with Google
+        </button>
+
         </form>
         <p className="text-sm text-center text-gray-600">
           Don’t have an account?{" "}
