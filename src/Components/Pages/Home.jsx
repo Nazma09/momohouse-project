@@ -13,6 +13,7 @@ import like from "../../assets/images/like.png";
 import party from "../../assets/images/party.png";
 import chefCap from "../../assets/images/chefCap.png";
 import girl from "../../assets/images/girl.png";
+import detail from "../../assets/images/detail.png";
 
 
 function Home() {
@@ -292,130 +293,143 @@ function Home() {
       </div>
       
 
-      <div className=" flex h-[600px] ">
 
-
-        <div className="  h-[100%] w-[40%] mt-14 pl-4">
-          {/* <img src={Map} alt="map" className="h-[100%] w-[100%]" /> */}
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10488.777485450102!2d85.34282895596081!3d27.670556269639885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1737472831890!5m2!1sen!2snp" width="640"
-         height="530" 
-          
-           allowfullscreen="" 
-           loading="lazy" 
-           // eslint-disable-next-line react/no-unknown-property
-           referrerpolicy="no-referrer-when-downgrade">
+<div className="  justify-center pl-10 mt-20">
+      <div >
+      <div className="text-center font-bold">
+          <h1 className=" text-5xl ">
+            Get <span className="text-orange-600">In Touch</span></h1>
+            <p className="text-green-800 mt-5">
+              Our friend team would love to hear from you
+            </p>
+        </div>
+      </div>
+     
+      <div className="flex flex-row justify-start pl-10 mt-20 bg-white  border-slate-300 shadow-2xl shadow-slate-300">
+        <div className="  items-start pl-72">
+        <img  className="h-[100%] w-[70%] pt-8" src={detail} />
             
-           </iframe>
-  
-
         </div>
 
-        <div className=" w-[60%] p-8 mr-28 ">
-          <div className=" shadow-sm w-[100%] h-[100%] ml-4 ">
+        
+        <div className="flex flex-col  md:w-1/2 pr-72">
+          <h1 className="text-3xl font-bold mb-6">
+            Contact <span className="text-orange-600">Us</span>
+          </h1>
+          <p className="text-gray-600 mb-4">
+            If you have any queries, send us a message. Our friendly team would
+            love to hear from you.
+          </p>
 
-
-
-            <h1 className="text-2xl font-bold ml-5 mt-5">Contact <span className="text-orange-600">Us</span></h1>
-            <p className="text-slate-500 ml-5 mt-5">If you have any queries, send us a message. Our Friendly team would <br /> love to hear from you</p>
-
-            <form className="ml-5 mt-5">
-              {/* First Name */}
-              <div className="flex gap-10 ">
-              <div>
-                <label className="block  mb-1 " htmlFor="firstName">
+          <form className="space-y-4 ">
+            <div className="flex flex-col md:flex-row md:space-x-4">
+              <div className="flex flex-col w-full">
+                <label htmlFor="fname" className="text-sm font-medium">
                   First Name
                 </label>
                 <input
                   type="text"
-                  id="firstName"
-                  name="firstName"
+                  id="fname"
+                  name="fname"
+                  className="border-2 border-green-700 rounded-md p-2"
                   placeholder="Enter your first name"
-                  className=" p-2 border rounded w-96"
-                  required
                 />
               </div>
-
-              {/* Last Name */}
-              <div>
-                <label className="block  mb-1" htmlFor="lastName">
+              <div className="flex flex-col w-full">
+                <label htmlFor="lname" className="text-sm font-medium">
                   Last Name
                 </label>
                 <input
                   type="text"
-                  id="lastName"
-                  name="lastName"
+                  id="lname"
+                  name="lname"
+                  className="border-2 border-green-700 rounded-md p-2"
                   placeholder="Enter your last name"
-                  className=" p-2 border rounded w-96"
-                  required
                 />
               </div>
-              </div>
+            </div>
 
-              {/* Purpose */}
-              <div>
-                <label className="block mb-1" htmlFor="purpose">
-                  What Can We Do For You?
-                </label>
-                <input
-                  type="text"
-                  id="purpose"
-                  name="purpose"
-                  placeholder="Enter your purpose"
-                  className=" w-full p-2 border rounded"
-                />
-              </div>
+            <div>
+              <label htmlFor="query" className="text-sm font-medium">
+                What can we do for you?
+              </label>
+              <select
+                id="query"
+                name="query"
+                className="border-2 border-green-700 rounded-md p-2 w-full"
+              >
+                <option value="">Choose</option>
+                <option value="support">Support</option>
+                <option value="sales">Sales</option>
+                <option value="feedback">Feedback</option>
+              </select>
+            </div>
 
-              {/* Email */}
-              <div>
-                <label className="block mb-1" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  placeholder="Enter your email"
-                  className="w-full p-2 border rounded"
-                  required
-                />
-              </div>
+            <div>
+              <label htmlFor="email" className="text-sm font-medium">
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                className="border-2 border-green-700 rounded-md p-2 w-full"
+                placeholder="Enter your email"
+              />
+            </div>
 
-              {/* Phone Number */}
-              <div>
-                <label className="block mb-1" htmlFor="phone">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  placeholder="Enter your phone number"
-                  className="w-full p-2 border rounded"
-                />
-              </div>
+            <div>
+              <label htmlFor="phone" className="text-sm font-medium">
+                Phone Number
+              </label>
+              <input
+                type="text"
+                id="phone"
+                name="phone"
+                className="border-2 border-green-700 rounded-md p-2 w-full"
+                placeholder="Enter your phone number"
+              />
+            </div>
 
-              {/* Message */}
-              <div>
-                <label className="block  mb-1" htmlFor="message">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  placeholder="Enter your message"
-                  className="w-full h-11 p-2 border rounded"
-                  rows="4"
-                  required
-                ></textarea>
-              </div>
-              <Button title='Send message'/>
+            <div>
+              <label htmlFor="message" className="text-sm font-medium">
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                className="border-2 border-green-700 rounded-md p-2 w-full"
+                placeholder="Write your message here"
+              ></textarea>
+            </div>
 
-            </form>
-
-          </div>
+            <div className="flex justify-center">
+              <button
+                type="submit"
+                className="bg-orange-600 text-white py-2 px-6 rounded-full hover:bg-orange-700"
+              >
+                Send Message
+              </button>
+            </div>
+          </form>
+        </div>
+        </div>
         </div>
 
-      </div>
+        <div className="w-full mt-20 md:ml-40 mb-2 md:w-1/2">
+  <div className="relative w-full aspect-[16/9]">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10488.777485450102!2d85.34282895596081!3d27.670556269639885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1737472831890!5m2!1sen!2snp"
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Map Location"
+      className="w-full h-full rounded-lg"
+    ></iframe>
+  </div>
+</div>
+
     </>
   );
 }

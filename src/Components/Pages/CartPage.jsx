@@ -71,6 +71,7 @@ function CartPage() {
 
      {CartItem.length > 0 &&(
       <div className="max-w-sm p-3 border rounded-lg shadow-md bg-white">
+        
       
       <div className="mb-4 w-96">
         <h2 className="text-sm font-semibold  text-slate-500">Location</h2>
@@ -83,15 +84,7 @@ function CartPage() {
       <div className="mb-4">
         <h2 className="text-lg font-semibold text-gray-800 mb-2">Order Summary</h2>
 
-        <div className="flex justify-between text-sm text-gray-600">
-          <span>Subtotal (0 items)</span>
-          <span>Rs. 0</span>
-        </div>
-
-        <div className="flex justify-between text-sm text-gray-600 mt-2">
-          <span>Shipping Fee</span>
-          <span>Rs. 0</span>
-        </div>
+        
       </div>
 
       
