@@ -10,7 +10,7 @@ function Profile() {
                     <img 
                         src={user?.picture} 
                         alt="User Profile" 
-                        className="w-24 h-24 mx-auto rounded-full border-4 border-blue-500 shadow-sm"
+                        className="w-28 h-28 mx-auto rounded-full border-4 border-blue-500 shadow-sm"
                     />
                     <h1 className="text-2xl font-semibold text-gray-800 mt-4">
                         Welcome, {user?.name}!
