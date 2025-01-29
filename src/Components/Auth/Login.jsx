@@ -84,7 +84,7 @@ const Login = () => {
             loginWithRedirect()
           }
           type="button"
-          className="flex items-center gap-2 justify-center border-2 border-slate-500 mt-3 w-full py-2 px-4 text-black font-medium rounded-md hover:text-white hover:bg-green-700"
+          className="flex items-center gap-2 justify-center border-2 border-slate-500 mt-3 w-full py-2 px-4 text-black font-medium rounded-md hover:text-white hover:bg-slate-300"
         >
           <FcGoogle size="25" />
           Login with Google
