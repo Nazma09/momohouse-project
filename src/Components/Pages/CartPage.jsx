@@ -113,20 +113,20 @@ function CartPage() {
           </button> 
       </div>
 
-  
+  <div className="bg-green-500 hover:bg-green-600 text-white rounded p-2 w-full mt-4 items-center justify-center ">
       <NavLink to='/payment' state={[...CartItem]}
-      
-        className="w-full bg-green-600 text-white py-3 rounded-lg text-sm font-semibold hover:bg-green-900 disabled:opacity-50"
+
         disabled
       >
         PROCEED TO CHECKOUT ({totalitems})
       </NavLink>
+      </div>
 
       <button 
       onClick={()=>{
         dispatch({type:"ClearCart"})
       }}
-       className="bg-red-600 text-white rounded p-2 w-52 mt-4 " > Clear Cart</button>
+       className="bg-red-500 hover:bg-red-600 text-white rounded p-2 w-full mt-4 " > Clear Cart</button>
     </div>
 
 
