@@ -21,12 +21,12 @@ const CartReducer = (state, action) => {
   console.log(action);
   switch (action.type) {
     case "ADD_TO_CART": {
-      const isExit = state.CartItem.find((item) => item._id === action.payload._id);
+      const isExit = state.CartItem.find((item) => item.id === action.payload.id);
 
       if (isExit) {
         const updatedCart = state.CartItem.map((item) =>
-          item._id === action.payload._id
-            ? { ...item, qty: item.qty + 1 }
+          item.id === action.payload.id
+            ? {...item, qty: item.qty + 1}
             : item
         );
 
@@ -46,7 +46,7 @@ const CartReducer = (state, action) => {
 
     case "Increment": {
       const updatedCart = state.CartItem.map((item) =>
-        item._id === action.payload._id
+        item.id === action.payload.id
           ? { ...item, qty: item.qty + 1 }
           : item
       );
@@ -58,7 +58,7 @@ const CartReducer = (state, action) => {
 
     case "Decrement": {
       const updatedCart = state.CartItem.map((item) =>
-        item._id === action.payload._id && item.qty > 1
+        item.id === action.payload.id && item.qty > 1
           ? { ...item, qty: item.qty - 1 }
           : item
       );
@@ -69,7 +69,7 @@ const CartReducer = (state, action) => {
     }
 
     case "Delete": {
-      const filteredItems = state.CartItem.filter((item) => item._id !== action.payload._id);
+      const filteredItems = state.CartItem.filter((item) => item.id !== action.payload.id);
       return {
         ...state,
         CartItem: filteredItems,
@@ -93,7 +93,7 @@ export const CartProvider = ({ children }) => {
   const [state, dispatch] = useReducer(CartReducer, initialState);
 
   useEffect(() => {
--    localStorage.setItem("cart", JSON.stringify(state.CartItem));
+    localStorage.setItem("cart", JSON.stringify(state.CartItem));
   }, [state.dispatch]);
 
   return (
