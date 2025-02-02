@@ -9,9 +9,7 @@ import { NavLink } from 'react-router-dom';
 function CartPage() {
   const { state,dispatch } = useContext(CartContext);
   const CartItem = state.CartItem;
-  const totalItems = state.CartItems.reduce((acc, item) => {
-    return acc + item.qty;
-  }, 0);
+ 
   
   const totalitems=state.CartItem.reduce((acc,item)=>{
     return acc+item.qty*item.caloriesPerServing;
