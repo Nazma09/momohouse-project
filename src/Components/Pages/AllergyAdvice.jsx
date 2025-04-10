@@ -254,7 +254,7 @@ const Allergy = () => {
       </section>
 
 <div className="mt-">
-<Footer/>
+
 </div>
     </div>
 
